@@ -1,0 +1,345 @@
+/*
+specs: default screen is mobile phone with minimum of 320 pixels. 
+There is 1 @media for screensize desktop.
+last update: 11 nov 2020 
+Nice to have:
+1) implement flexbox in navbar
+Author: David Sneek
+*/
+
+/*goal: url click interactivity */
+a:hover {
+    color: red;
+}
+a:active {
+    color: blue;
+}
+
+
+body { 
+    background-color: #eee7e7;
+    color: greyblack;
+    /*note to self: following line is short-hand notation */
+    font: normal 18px Ubuntu, Merriweather, Nunito;
+    width: 302px;
+    margin: 0 auto;
+}
+
+/* goal: titles above each page*/
+h1 {
+    letter-spacing: 3px;
+    margin-top: 60px;
+    margin-bottom: 20px;
+    margin-left: 80px;
+    margin-right: 100px; 
+  }
+
+footer {
+  margin-top: 10px;
+}
+
+  /*goal: default layout of text inside a border with a radius*/
+.layoutTextWithBorderRadius {
+    border: 4px solid rgb(219, 210, 210);
+    padding: 10px 10px 10px 20px;
+    margin: 20 px 0, auto, auto;
+    border-radius: 15px;
+}
+
+.centerText {
+    text-align: center;
+}
+
+.addShadow {
+    box-shadow: 5px 5px 10px #999;
+}
+
+
+
+/*goal: set default picture dimensions. img.photo1 gets custom treatment in @media-section */
+img.photo1 {
+    width: 281px; 
+    height:  auto;
+    border: 5px solid grey;
+	  background-color: yellow;
+    padding: 5px;
+}
+
+/*goal: set default picture dimensions. img.photo2 gets custom treatment in @media-section */
+img.photo2 {
+  width: 281px; 
+  height:  auto;
+  border: 5px solid grey;
+  background-color: yellow;
+  padding: 5px;
+}
+
+/*border that looks like a serrated stamp: */
+.post-stamp {
+	height: 40px;
+	background: whitesmoke;
+    border: 6px dashed #1b1a19; 
+    padding: 5px;
+    margin-top: 270px;
+}
+
+.blue-background {
+    background-color: lightblue;
+}
+
+.brown-background {
+    background-color: burlywood;
+}
+
+.green-background {
+    background-color: rgb(113, 185, 113);
+}
+
+
+    
+
+/* goal: create a navbar on top of each page (until line  end(...)page below ) */
+nav ul {
+  list-style-type: none;
+  margin: 0px ;
+  overflow: hidden;
+  background-color: #333;
+  position: fixed;
+  top: 0;
+  width: 262px;
+}
+
+nav li {
+  float: left;
+}
+
+nav li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 10px 10px;
+  text-decoration: none;
+  width: 200px;
+}
+
+nav li a:hover:not(.active) {
+  background-color: #111;
+}
+
+nav .active {
+  background-color: #4CAF50;
+}
+
+/* subgoal: add a gray right border to all list items, 
+except the last item (last-child) */
+nav li {
+    border-bottom: 1px solid #bbb;
+}
+
+nav li:last-child {
+    border-bottom: none;
+}
+/* end of code specific for creating navbar on top of each page */
+
+/*styling form 'contact': <start*/
+
+/*field reistips*/
+.textAreaLayout {
+  width:200px; 
+  height:250px;
+  align-content: left;
+  padding: 10px;
+}
+
+/*styling form 'contact': <start*/
+
+/*field reistips*/
+.textAreaLayout {
+  width:234px; 
+  height:300px;
+  align-content: left;
+  padding: 10px;
+}
+
+/*styling form 'contact': end>*/
+
+/*styling form 'blog': start>*/
+
+/*Flex containener containing blogposts*/
+.blogpostFlexbox {
+   display: flex;
+   flex-direction: column;
+   justify-content: space-between;
+}
+/*flex container item*/
+.blogpost { 
+  width: 300px; 
+  border: 1px solid black; 
+}
+
+  /*flex container item photo*/
+  img.photo3, img.photo4{
+    width: 300px; 
+  }
+
+
+
+  /*flex container item title*/
+ .blogpostTitle {
+  letter-spacing: 2px;
+  font-size: 22px;
+  margin-top: 15px;
+  margin-bottom: 65px;
+  margin-left: 55px;
+  margin-right: 25px;
+}
+
+/*styling form 'blog': end>*/
+
+@media screen and (min-width: 1024px) {    
+  html{
+    height: 100%;
+  }
+  
+  body {
+      height: 100%;
+      width: 847px;
+      background-color: rgb(162, 184, 194) ;
+      font-size: 15px;
+      line-height: 1.5;
+      color: rgb(18, 58, 43);
+  }
+
+  /* increase size of navigation bar */
+  nav ul {
+    width: 811px;
+  }
+
+  nav li a {
+      padding: 14px 16px;
+      width: 150px;
+  }
+
+  /* field reistips*/
+  .textAreaLayout {
+    width:755px; 
+    height:250px;
+    padding: 20px;
+  }
+
+
+  /* subgoal: add a gray right border to all list items, 
+  except the last item (last-child) */
+  nav li {
+      border-bottom: none;
+      border-right: 1px solid #bbb;
+  }
+  
+  nav li:last-child {
+      border-right: none;
+  }
+
+  /*border that looks like a serrated stamp: */
+  .post-stamp {
+  height: 40px;
+  border: 12px dashed #1b1a19; 
+  padding: 10px;
+  margin-top: 150px;
+  }
+
+
+  /*goal: increase size of text and headers*/
+  .layoutTextWithBorderRadius {
+    border: 4px solid rgb(219, 210, 210);
+    padding: 15px 15px 15px 30px;
+    margin: 20 px 0, auto, auto;
+    border-radius: 15px;
+    width: 806px;
+  }
+
+
+
+  /*goal: decrease photo size, so they can be shown next to each other horizontally on desktop screen*/
+  img.photo1 {
+    width: 239px; 
+    height:  152px;
+    border: 15px solid grey;
+    background-color: yellow;
+    padding: 20pxx;
+  }
+
+  /*goal: increase photo size, so it is shown bigger on desktop screen*/
+  img.photo2 {
+    width: 813px; 
+    height:  auto;
+    border: 15px solid grey;
+    background-color: yellow;
+    padding: 20pxx;
+  }
+
+
+    div.inlineDisplay {
+    display: inline-block;
+  }  
+  
+  /* page 'blog': start>*/
+
+   /*flex container*/ 
+   .blogpostFlexbox {
+   height: 100%;
+   display: flex;
+   flex-direction: row;
+   flex-wrap: wrap;
+   justify-content: space-around;
+   align-items: stretch;
+  }
+
+  /*flex container item */
+  .blogpost { 
+    width: 150px; 
+    border: 2px solid black;
+    margin-top: 10px;
+  }
+
+  /*flex container item photo*/
+  img.photo3{
+    width: 150px; 
+    height: 90px;
+  }
+
+  /*flex container item photo*/
+  img.photo4{
+    width: 150px; 
+    height: 110px;
+  }
+
+  /*flex container item photo*/
+  img.photo5{
+    width: 428px; 
+  }
+
+  /*flex container item title*/
+  .blogpostTitle {
+    letter-spacing: 3px;
+    font-size: 20px;
+    margin-top: 10px;
+    margin-bottom: 15px;
+    margin-left: 15px;
+    margin-right: 25px;
+  }
+
+  /*foto lager dan de rest, omdat te versterken dat het een kleiner
+    hondje is dat op de grond ligt */ 
+  .blogpost:nth-child(1) {
+    align-self: flex-end;
+  }
+
+  /*laatste hond grotere foto*/ 
+  .blogpost:nth-child(6) {
+    flex-grow: 0.4;
+  }
+  
+    /*page 'blog': end>*/
+
+
+}

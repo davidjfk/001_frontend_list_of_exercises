@@ -1,0 +1,90 @@
+@import url("https://fonts.googleapis.com/css2?family=Work+Sans:wght@500&display=swap");
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  height: 100%;
+  background-color: #c3cfe2;
+  overflow: scroll;
+  scroll-behavior: smooth;
+}
+
+main {
+  overflow-y: hidden;
+}
+
+.header {
+  display: flex;
+  justify-content: start;
+  flex-wrap: wrap;
+  align-items: center;
+  padding: 10px 5%;
+}
+.header__logo {
+  max-width: 90%;
+  height: auto;
+  cursor: pointer;
+  margin-left: 13px;
+  position: relative;
+  background-size: cover;
+}
+.header__wrapper-of-next-selector {
+  width: 90%;
+  margin: 0 auto;
+  position: relative;
+}
+.header__project-and-author {
+  font-family: "Work Sans", Tahoma;
+  position: absolute;
+  bottom: 3px;
+  color: white;
+  padding: 0 10px 0 55px;
+}
+.header__nav {
+  padding: 2px;
+}
+.header__list {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  margin-top: 10px;
+}
+.header__item {
+  font-family: "Work Sans", Tahoma;
+  font-weight: 800;
+  font-size: 1em;
+  text-decoration: none;
+  padding: 10px;
+  display: inline-block;
+}
+.header__item-button {
+  text-decoration: none;
+  display: inline-block;
+  font-size: 20px;
+  background: black;
+  padding: 1em 3em;
+  color: white;
+  outline: 3px solid black;
+  transition: all ease-in-out 300ms;
+  text-transform: uppercase;
+}
+.header__item-button:hover {
+  outline-offset: 5px;
+}
+
+@media screen and (min-width: 445px) {
+  html,
+main,
+body {
+    overflow-x: hidden;
+  }
+}/*# sourceMappingURL=main.css.map */

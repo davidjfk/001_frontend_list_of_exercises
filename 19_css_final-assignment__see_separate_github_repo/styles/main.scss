@@ -1,0 +1,98 @@
+@import url("https://fonts.googleapis.com/css2?family=Work+Sans:wght@500&display=swap");
+$header-font: "Work Sans";
+$header-background-color: black;
+$header-tekst-color: white;
+$body-background-color: #c3cfe2;
+
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  height: 100%;
+  background-color: $body-background-color;
+  overflow: scroll;
+  scroll-behavior: smooth;
+}
+
+main {
+  overflow-y: hidden;
+}
+
+//logo with navbar
+.header {
+  display: flex;
+  justify-content: start;
+  flex-wrap: wrap;
+  align-items: center;
+  padding: 10px 5%;
+  &__logo {
+    max-width: 90%;
+    height: auto;
+    cursor: pointer;
+    margin-left: 13px;
+    position: relative;
+    background-size: cover;
+  }
+  &__wrapper-of-next-selector {
+    width: 90%;
+    margin: 0 auto;
+    position: relative;
+  }
+  &__project-and-author {
+    font-family: $header-font, Tahoma;
+    position: absolute;
+    bottom: 3px;
+    color: $header-tekst-color;
+    padding: 0 10px 0 55px;
+  }
+  &__nav {
+    padding: 2px;
+  }
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+    margin-top: 10px;
+  }
+  &__item {
+    font-family: $header-font, Tahoma;
+    font-weight: 800;
+    font-size: 1em;
+    text-decoration: none;
+    padding: 10px;
+    display: inline-block;
+  }
+  &__item-button {
+    text-decoration: none;
+    display: inline-block;
+    font-size: 20px;
+    background: $header-background-color;
+    padding: 1em 3em;
+    color: $header-tekst-color;
+    outline: 3px solid $header-background-color;
+    transition: all ease-in-out 300ms;
+    text-transform: uppercase;
+    &:hover {
+      outline-offset: 5px;
+    }
+  }
+}
+
+// req: horizontal scrollbar if screen width > 400px. To implement this, min-width is set to 445px (instead of 400px).
+@media screen and (min-width: 445px) {
+  html,
+  main,
+  body {
+    overflow-x: hidden;
+  }
+}

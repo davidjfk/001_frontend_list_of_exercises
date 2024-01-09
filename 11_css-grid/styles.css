@@ -1,0 +1,90 @@
+/*
+  default screensize: smartphone 
+  1 @media for desktop, and 1 for widescreen.
+  De "schilderstape" zit er nog op.
+  David Sneek
+*/
+
+html, main, body {
+    height: 100%;
+}
+
+.container {
+    height: 100%;
+    width: 100%;
+    display: grid;
+    grid-gap: 2px;
+    grid-template-columns: repeat(18, 1fr);
+    grid-template-rows: 10% 40% 36% 10%;
+    grid-template-areas:
+        "h h h h h h h h h h h h h h h h h h"
+        "m m m m m m m m m m m m m m m m m m"
+        "w w w w w w w w w w w w w w w w w w"
+        "f f f f f f f f f f f f f f f f f f";
+    }
+    
+    .header 
+        {   grid-area: h; 
+            background-color: lightblue;
+            font-size: 22px;    
+            border-style: solid;  
+            
+    }
+    .main 
+        {   grid-area: m;
+            background-color: greenyellow;
+            font-size: 22px;
+            border-style: solid;  
+    }
+    .widget 
+        {   grid-area: w;
+            background-color: purple;
+            font-size: 22px;
+            border-style: solid;  
+    }
+    .footer 
+        {   grid-area: f;
+            background-color: blue;
+            font-size: 22px;
+            border-style: solid;  
+    }
+
+    @media screen and (min-width: 1024px) /* Desktop, HD */ 
+    {
+        body {
+          background: red;
+        }
+        
+        .container {
+            height: 100%;
+            grid-gap: 7px;
+  
+            grid-template-rows:36% 10% 40% 10%;
+            grid-template-areas:
+            "h h h h h m m m m m m m m m m m m m"
+            "h h h h h m m m m m m m m m m m m m"
+            "h h h h h w w w w w w w w w w w w w "
+            "h h h h h f f f f f f f f f f f f f"
+        }
+    }
+      
+    
+    
+    @media screen and (min-width: 2560px) /* Extra wide screen, QHD, 2K */ 
+    {
+        body {
+          background: rgb(207, 79, 158);
+        }
+
+        .container {
+ 
+            grid-template-rows:36% 10% 40% 10%;
+            grid-gap: 10px;  
+            grid-template-areas:
+            "h h h h h m m m m m m m m w w w w w "
+            "h h h h h m m m m m m m m w w w w w"
+            "h h h h h m m m m m m m m w w w w w "
+            "h h h h h f f f f f f f f w w w w w"
+        }
+      
+    }

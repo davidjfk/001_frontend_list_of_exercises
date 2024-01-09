@@ -1,0 +1,1 @@
+Open files with extension 'bmpr' e.g. on https://balsamiq.cloud  

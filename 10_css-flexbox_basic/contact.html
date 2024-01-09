@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title> Contact</title>
+  <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+
+<body>
+  <header class="centerText">
+    <nav>
+      <ul>
+        <li><a href="index.html" alt="link naar pagina index"> index</a></li>
+      </ul>
+    </nav>
+    <h1>Contact</h1>
+
+  </header>
+  <main>
+    <form name="contact01" method="POST" data-netlify="true" class="layoutTextWithBorderRadius">
+      <label>Voornaam: <input type="text" name="voornaam:" /></label>
+      <p>
+        <label>Achternaam: <input type="text" name="achternaam:" /></label>
+      </p>
+      <p>
+        <label>Email: <input type="email" name="email:" /></label>
+      </p>
+      <p>
+        <label for="reistips" name="reistips">Biografie:</label>
+        <textarea placeholder="uw reistips en tricks" name="reistips:" class="textAreaLayout">
+      </textarea>
+      </p>
+      <br />
+      <button type="submit">Send</button>
+    </form>
+  </main>
+  <footer class="layoutTextWithBorderRadius centerText addShadow">
+    <p>Author: David Sneek</p>
+    <p><a href="mailto:davidjfk@hotmail.com">davidjfk@hotmail.com</a></p>
+  </footer>
+</body>
+
+</html>

@@ -1,0 +1,65 @@
+.hamburger-menu-icon {
+  width: 100px;
+  height: 100px;
+}
+
+.color-toggle-menu {
+  display: inline-block;
+  transform: translateX(-390px);
+  padding-left: 5px;
+}
+
+.make-color-toggle-menu-visible {
+  transform: translateX(5px);
+  transition: transform 400ms ease-in-out 300ms;
+}
+
+.make-color-toggle-menu-invisible {
+  transform: translateX(-395px);
+  transition: transform 400ms ease-in-out 300ms;
+}
+
+h3 {
+  margin-left: 13px;
+}
+
+li {
+  list-style-type: none;
+  width: 350px;
+  padding: 10px;
+  border: 1px solid black;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+.grey-background,
+.grey-row {
+  background-color: #d8d2d2;
+}
+
+.red-background,
+.red-row {
+  background-color: red;
+}
+
+.orange-background,
+.orange-row {
+  background-color: orange;
+}
+
+.purple-background,
+.purple-row {
+  background-color: purple;
+}
+
+.green-background,
+.green-row {
+  background-color: green;
+}
+
+.make-invisible {
+  display: none;
+}/*# sourceMappingURL=style.css.map */

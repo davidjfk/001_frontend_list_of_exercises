@@ -1,0 +1,203 @@
+$body-background-color: #c3cfe2;
+$gallery-image-background-color: rgb(37, 43, 62);
+$gallery-image-button-text-color: rgb(60,60,60);
+$thumb-background-color: rgb(107, 108, 114);
+
+
+@mixin gallery__image-wrapper-default {
+  background-color: $gallery-image-background-color;
+  width: 100%;
+  height: 100%;
+  border-radius: 20px;
+  display: inline-block;
+  opacity: 1;
+  position: relative;
+}
+
+.gallery {
+  display: grid;
+  gap: 1%;
+  grid-template-columns: 100%;
+  grid-template-rows: repeat(7, 12%);
+  margin-left: 20px;
+  margin-right: 20px;
+  grid-template-areas:
+    "image1"
+    "image2"
+    "image3"
+    "image4"
+    "image5"
+    "image6"
+    "image7";
+
+  &__image-wrapper1 {
+    grid-area: image1;
+    @include gallery__image-wrapper-default();
+    &:hover {
+      .gallery__image {
+        opacity: 0;
+      }
+      .gallery__button {
+        opacity: 1;
+        cursor: pointer;
+      }
+    }
+  }
+
+  &__image-wrapper2 {
+    grid-area: image2;
+    @include gallery__image-wrapper-default();
+    &:hover {
+      .gallery__image {
+        opacity: 0;
+      }
+      .gallery__button {
+        opacity: 1;
+        cursor: pointer;
+      }
+    }
+  }
+
+  &__image-wrapper3 {
+    grid-area: image3;
+    @include gallery__image-wrapper-default();
+    &:hover {
+      .gallery__image {
+        opacity: 0;
+      }
+      .gallery__button {
+        opacity: 1;
+        cursor: pointer;
+      }
+    }
+  }
+
+  &__image-wrapper4 {
+    grid-area: image4;
+    @include gallery__image-wrapper-default();
+    &:hover {
+      .gallery__image {
+        opacity: 0;
+      }
+      .gallery__button {
+        opacity: 1;
+        cursor: pointer;
+      }
+    }
+  }
+
+  &__image-wrapper5 {
+    grid-area: image5;
+    @include gallery__image-wrapper-default();
+    &:hover {
+      .gallery__image {
+        opacity: 0;
+      }
+      .gallery__button {
+        opacity: 1;
+        cursor: pointer;
+      }
+    }
+  }
+
+  &__image-wrapper6 {
+    grid-area: image6;
+    @include gallery__image-wrapper-default();
+    &:hover {
+      .gallery__image {
+        opacity: 0;
+      }
+      .gallery__button {
+        opacity: 1;
+        cursor: pointer;
+      }
+    }
+  }
+
+  &__image-wrapper7 {
+    grid-area: image7;
+    @include gallery__image-wrapper-default();
+    &:hover {
+      .gallery__image {
+        opacity: 0;
+      }
+      .gallery__button {
+        opacity: 1;
+        cursor: pointer;
+      }
+    }
+  }
+
+  &__image {
+    opacity: 1;
+    display: inline-block;
+    object-position: center;
+    object-fit: fill;
+    width: 100%;
+    height: 100%;
+    border-radius: 3%;
+    transition: opacity 0.6s 0.2s ease-in;
+  }
+
+  &__button {
+    transition: opacity 0.6s 0.2s ease-in;
+    opacity: 0;
+    transform: translate(-50%, 50%);
+    position: relative;
+    top: -50%;
+    left: -50%;
+    margin-right: -50%;
+    border-radius: 0.3em;
+  }
+
+  &__text {
+    font-size: 1.1em;
+    font-weight: bold;
+    display: inline-block;
+    margin: 0 0.25em 0 0;
+    padding: 0.89em 1em 0.89em;
+    line-height: 1em;
+    color: $gallery-image-button-text-color;
+  }
+}
+
+.scrollbar-vertical::-webkit-scrollbar {
+  width: 14px;
+  &-thumb {
+    background-color: $thumb-background-color;
+    border-radius: 20px;
+    height: 100px;
+  }
+  &--tracking-area {
+    background: $body-background-color;
+  }
+}
+
+@media screen and (min-width: 700px) /* tablet */ {
+  .gallery {
+    gap: 1.8vw;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: repeat(4, 24%);
+    margin-left: 5vw;
+    margin-right: 4vw;
+    grid-template-areas:
+      "image1 image2"
+      "image3 image4"
+      "image5 image6"
+      "image7 image8";
+  }
+}
+
+@media screen and (min-width: 1024px) /* Desktop, HD */ {
+  .gallery {
+    gap: 2vw;
+    grid-template-columns: 30% 30% 30%;
+    grid-template-rows: repeat(3, 28%);
+    margin-left: 10vw;
+    margin-right: 2vw;
+    grid-template-areas:
+      "image1 image2 image3"
+      "image4 image5 image6"
+      "image7 image8 image9";
+  }
+}

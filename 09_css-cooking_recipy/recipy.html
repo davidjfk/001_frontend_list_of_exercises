@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title> Recepten template</title>
+  <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+
+<body>
+  <header class="centerText">
+    <nav>
+      <ul>
+        <li><a href="index.html" alt="link naar pagina index"> index</a></li>
+      </ul>
+    </nav>
+    <h1>Recepten template</h1>
+
+  </header>
+  <main>
+    <form name="recipy" method="POST" data-netlify="true" class="layoutTextWithBorderRadius">
+      <label>Naam: <input type="text" name="name:" /></label>
+      <p>
+        <label>Email: <input type="email" name="email:" /></label>
+      </p>
+      <p>
+        <label>Telefoon: <input type="tel" id="phone" name="phone:" /></label>
+      </p>
+      <p>
+        <label>Leeftijd: <input type="number" id="number" name="leeftijd:" /></label>
+      </p>
+      <p>
+        <label>Geboortedatum: <input type="date" id="birthday" name="birthday:" /></label>
+      </p>
+      <p>
+        <label>Man: <input type="radio" id="male" name="gender:" value="man" /></label>
+        <label>Vrouw: <input type="radio" id="female" name="gender:" value="vrouw" /></label>
+        <label>Overig: <input type="radio" id="other" name="gender:" value="overig" /></label>
+      </p>
+
+      <p>
+        <label>Favoriete cuisine:
+          <br /><label>Frans <input type="checkbox" name="cuisine:" value="Frans"></label>
+          <br /><label>Spaans <input type="checkbox" name="cuisine:" value="Spaans"></label>
+          <br /><label>Italiaans<input type="checkbox" name="cuisine:" value="Italiaans"></label>
+          <br /><label>Arabisch <input type="checkbox" name="cuisine:" value="Arabisch"></label>
+        </label><br>
+      </p>
+
+      <label for="favcolor" name="favcolor1">Favoriete kleur short:</label>
+      <input type="color" id="favcolor" name="favcolor2">
+      <p>
+        <label for="biografie" name="Biografie1">Biografie:</label>
+        <textarea placeholder="Vul hier uw biografie in" name="Biografie:" class="textAreaLayout">
+      </textarea>
+      </p>
+      <p>
+        <label for="myfile" name="myfile1">Upload uw recepten:</label>
+        <input type="file" id="myfile" name="myfile2">
+      </p>
+      <p>
+        <label for="homepage" name="receptensite1">Voeg de url van uw receptensite toe:</label>
+        <input type="url" id="homepage" name="receptensite2">
+      </p>
+
+      <br />
+      <button type="submit">Send</button>
+      <button type="reset">Reset</button>
+    </form>
+  </main>
+  <br />
+  <footer class="layoutTextWithBorderRadius centerText addShadow">
+    <p>Author: David Sneek</p>
+    <p><a href="mailto:chef@cuisine.com">chef@cuisine.com</a></p>
+  </footer>
+</body>
+
+</html>

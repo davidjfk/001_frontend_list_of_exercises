@@ -1,0 +1,16 @@
+{
+  "name": "60-js-password-verify",
+  "version": "1.0.0",
+  "description": "",
+  "main": "password_check.js",
+  "scripts": {
+    "test": "jest --coverage"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/jest": "^27.4.0",
+    "jest": "^27.5.1"
+  }
+}
+

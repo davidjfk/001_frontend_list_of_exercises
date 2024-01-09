@@ -1,0 +1,138 @@
+/*
+  subject: creditcard size request format that is sent from person A to B, with approve
+  and decline button.
+  author: David Sneek
+*/
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  width: 100%;
+  height: 100%;
+}
+
+body {
+  font-family: 'Roboto';
+}
+
+.container {
+    display: inline-grid; 
+    height: 100%;
+    background-color: white;  
+    border: solid 3px rgb(233, 232, 232);  
+    border-radius: 10px;
+    box-shadow: 0px 2px rgb(233, 232, 232);  ;
+    margin: 10px;
+    justify-content: center;
+    height: 320px;
+    width: 540px;
+    grid-gap: 0px;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: 7fr 7fr 6fr;
+    grid-template-areas:
+   
+    "h h h h h h h h as as as as"
+    "m m m m m m m m m m m m"
+    "ap ap ap ap ap ap d d d d d d";
+    }
+
+
+  /* grid-area header: start */  
+  .header {   
+    grid-area: h;       
+  }
+  .nameOfPerson {
+    font-size: 34px;   
+    margin: 10px 10px 0px 10px;
+    font-weight: bold;
+  }
+  
+  .systemStatusOfPerson {
+    font-size: 27px; 
+    margin: 10px 10px;
+    color: rgb(175, 172, 172);
+  }
+  /* grid-area header: end */
+
+
+  /* grid-area aside: start */
+  .aside {   
+    grid-area: as; 
+    justify-self: end;  
+  }
+  .photo{
+    width: 65px;
+    height: 65px;
+    margin: 20px;   
+    }
+  /* grid-area aside: end */
+
+
+  /* grid-area main: start */
+  .main { 
+    grid-area: m;
+    font-size: 27px;
+    color: rgb(95, 94, 94);
+    border-bottom: 2px solid rgb(233, 232, 232);  ;
+    margin-bottom: 10px; 
+  }   
+  .requestOfPerson {
+    margin: 10px 10px;
+  }
+    /* grid-area main: end */
+
+
+  /*grid-area approve: start */    
+  .approve {   
+    grid-area: ap;
+    border-style: solid;
+    border-color: rgb(91, 214, 120);
+    border-width: 2px 0px 2px 2px;
+    border-radius: 10px 0px 0px 10px;
+    padding: 15px 12px; 
+    margin: 10px 0px 18px 13px;
+  }
+  .approveLink {
+    font-size: 24px;
+    font-weight: bold;
+    text-decoration: none;
+    padding: 20px 80px;
+    color:rgb(91, 214, 120);
+    font-family: arial;
+  }
+  /*grid-area approve: end */   
+
+
+  /*grid-area decline: start */    
+  .decline {   
+    grid-area: d;
+    border-style: solid; 
+    border-color: rgb(240, 37, 55);
+    border-width: 2px;
+    border-radius: 0px 10px 10px 0px;
+    padding: 15px 12px;  
+    margin: 10px 15px 18px 0px;
+    
+  }
+  .declineLink {
+    font-size: 24px;
+    font-weight: bold;
+    text-decoration: none;
+    padding: 20px 80px;
+    color: rgb(240, 37, 55);
+    font-family: arial;
+  }          
+   /*grid-area decline: end */     
+  
+
+ 
+      
+
+
+

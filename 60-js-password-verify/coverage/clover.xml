@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<coverage generated="1644415575379" clover="3.2.0">
+  <project timestamp="1644415575380" name="All files">
+    <metrics statements="31" coveredstatements="31" conditionals="20" coveredconditionals="20" methods="8" coveredmethods="8" elements="59" coveredelements="59" complexity="0" loc="31" ncloc="31" packages="1" files="1" classes="1"/>
+    <file name="password_check.js" path="/mnt/c/dev/jsWinc/list_of_assignments/60-js-password-verify/password_check.js">
+      <metrics statements="31" coveredstatements="31" conditionals="20" coveredconditionals="20" methods="8" coveredmethods="8"/>
+      <line num="2" count="10" type="cond" truecount="2" falsecount="0"/>
+      <line num="5" count="1" type="stmt"/>
+      <line num="6" count="10" type="cond" truecount="2" falsecount="0"/>
+      <line num="7" count="1" type="stmt"/>
+      <line num="9" count="9" type="cond" truecount="2" falsecount="0"/>
+      <line num="12" count="1" type="stmt"/>
+      <line num="13" count="11" type="cond" truecount="2" falsecount="0"/>
+      <line num="14" count="1" type="stmt"/>
+      <line num="16" count="10" type="stmt"/>
+      <line num="18" count="10" type="stmt"/>
+      <line num="19" count="10" type="cond" truecount="2" falsecount="0"/>
+      <line num="23" count="1" type="stmt"/>
+      <line num="24" count="17" type="cond" truecount="2" falsecount="0"/>
+      <line num="25" count="1" type="stmt"/>
+      <line num="27" count="16" type="stmt"/>
+      <line num="29" count="16" type="stmt"/>
+      <line num="30" count="16" type="cond" truecount="2" falsecount="0"/>
+      <line num="36" count="1" type="stmt"/>
+      <line num="37" count="11" type="cond" truecount="2" falsecount="0"/>
+      <line num="38" count="1" type="stmt"/>
+      <line num="40" count="10" type="stmt"/>
+      <line num="42" count="10" type="stmt"/>
+      <line num="43" count="10" type="cond" truecount="2" falsecount="0"/>
+      <line num="60" count="1" type="stmt"/>
+      <line num="62" count="55" type="stmt"/>
+      <line num="63" count="11" type="stmt"/>
+      <line num="67" count="1" type="stmt"/>
+      <line num="68" count="8" type="stmt"/>
+      <line num="76" count="8" type="cond" truecount="2" falsecount="0"/>
+      <line num="78" count="8" type="stmt"/>
+      <line num="81" count="1" type="stmt"/>
+    </file>
+  </project>
+</coverage>

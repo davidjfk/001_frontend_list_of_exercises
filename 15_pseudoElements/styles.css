@@ -1,0 +1,46 @@
+/*author: David Sneek */
+@import url("https://fonts.googleapis.com/css?family=Oswald:700");
+
+body {
+  background: #231f20;
+  text-align: center;
+}
+
+h1 {
+  color: #fff;
+  font-family: "Oswald";
+  font-weight: 700;
+  position: relative;
+  margin: 30px auto;
+  text-transform: uppercase;
+  width: 550px;
+}
+
+h1::before,
+h1::after {
+  content: "";
+  background: #4a90e2;
+  display: inline-block; /*teacher-choice: block */
+  position: absolute;
+  height: 20px;
+  width: 20px;
+  /* pitfall: correct syntax: property content only has  quotation marks without a value. (this is unsemantic) */
+  /* WincTeacher: Justin Smid: you need width, height and display to show the half circles */
+}
+h1::before {
+  border-radius: 200px 0px 0px 200px;
+  -moz-border-radius: 200px 0px 0px 200px;
+  -webkit-border-radius: 200px 0px 0px 200px;
+  border: 0px none #000000;
+  left: 75px; /*teacher-choice: left: 0  --> but then semi-circle is too far away from the h1 text ?? */
+  top: 9px;
+}
+
+h1::after {
+  border-radius: 0px 200px 200px 0px;
+  -moz-border-radius: 0px 200px 200px 0px;
+  -webkit-border-radius: 0px 200px 200px 0px;
+  border: 0px none #000000;
+  left: 455px; /*teacher-choice: right: 0 --> but then semi-circle is too far away from the h1 text ?? */
+  top: 9px;
+}

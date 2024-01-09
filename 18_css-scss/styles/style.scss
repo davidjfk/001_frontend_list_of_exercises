@@ -1,0 +1,205 @@
+@import url("https://fonts.googleapis.com/css?family=Raleway:300,500,700");
+@import "./constants";
+/* Global */
+* {
+  box-sizing: border-box;
+}
+body {
+  color: #090b08;
+  margin: 0;
+  font-family: "Raleway", sans-serif;
+  font-weight: 300;
+  background-color: #ecffe9;
+}
+h1 {
+  font-size: 1.7em;
+  font-weight: 700;
+  line-height: 1.5em;
+  text-transform: uppercase;
+}
+h2 {
+  text-transform: uppercase;
+}
+h4 {
+  font-size: 0.8em;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+h6 {
+  font-weight: 500;
+}
+a {
+  text-decoration: none;
+  color: #090b08;
+}
+ul {
+  list-style: none;
+}
+.btn {
+  display: inline-block;
+  padding: 0.5em 1.5em;
+  border: solid 1px #000;
+  transition: all 0.3s ease-in;
+}
+.btn:hover,
+.btn:focus {
+  transform: translate(0px, -2px);
+  -webkit-box-shadow: 0px 10px 7px -9px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 0px 10px 7px -9px rgba(0, 0, 0, 0.75);
+  box-shadow: 0px 10px 7px -9px rgba(0, 0, 0, 0.75);
+  transition: all 0.3s ease-out;
+}
+form {
+  display: flex;
+}
+form input:first-child {
+  flex: 1 0 80%;
+  background-color: transparent;
+}
+form input:last-child {
+  flex: 1 0 20%;
+  border-left: 0;
+  cursor: pointer;
+  background-color: #c0eea9;
+  transition: all 0.25s ease;
+}
+#submit:hover {
+  background-color: #000;
+  color: #fff;
+  transition: all 0.25s ease;
+  -webkit-box-shadow: 0px 10px 7px -9px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 0px 10px 7px -9px rgba(0, 0, 0, 0.75);
+  box-shadow: 0px 10px 7px -9px rgba(0, 0, 0, 0.75);
+}
+input {
+  padding: 10px;
+  border: 1px solid #000;
+}
+
+/* Pas alleen de onderstaande regels aan */
+
+/* Header: part 1 */
+.header {
+  display: flex;
+  justify-content: space-around;
+  position: fixed;
+  width: 100%;
+  z-index: 1;
+  padding: $paddingDefaultValue;
+  background-color: #c0eea9;
+  height: 120px;
+  -webkit-box-shadow: 0px 10px 7px -9px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 0px 10px 7px -9px rgba(0, 0, 0, 0.75);
+  box-shadow: 0px 10px 7px -9px rgba(0, 0, 0, 0.75);
+  &__img {
+    width: auto;
+    padding-top: 20px;
+    height: 7.5em;
+  }
+}
+
+/* Hero Section: part 2 */
+.hero {
+  padding: $paddingDefaultValue;
+  display: flex;
+  height: 100vh;
+  align-items: center;
+  background: $backgroundColor;
+  &__img {
+    display: block;
+    height: auto;
+    width: 15.5em;
+  }
+  &__text {
+    @include textDefault();
+  }
+}
+
+/* Featured Section: part 3 */
+.featured {
+  padding: $paddingDefaultValue;
+  /* &__title also used outside of the featured section */
+  &__title {
+    display: flex;
+    align-items: center;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    padding-bottom: 1em;
+  }
+  &--title-right {
+    justify-content: flex-end;
+  }
+  /* &__line also used outside of the featured section */
+  &__line {
+    width: 3em;
+    height: 1px;
+    background-color: $featuredBackgroundColor;
+    margin-right: 1em;
+  }
+  &__wrapper {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  &__img-source {
+    width: 300px;
+  }
+
+  &__text {
+    @include textDefault();
+  }
+  &__p {
+    text-align: justify;
+    padding: 20px;
+    line-height: 1.4em;
+  }
+}
+
+/* About Section: part 4 */
+.about {
+  background-color: $backgroundColor;
+  padding: $paddingDefaultValue;
+  &__wrapper {
+    display: flex;
+  }
+  &__text {
+    @include textDefault();
+  }
+  &__p {
+    text-align: justify;
+    padding-bottom: 1em;
+    line-height: 1.4em;
+  }
+  &__video-wrapper {
+    position: relative;
+    padding-bottom: 33.25%;
+    overflow: hidden;
+    align-self: center;
+    flex: 2 0 55%;
+    margin: 1.4em 0;
+  }
+  &__iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+}
+
+/* Contact Section: part 4 (continuation) */
+.contact {
+  padding: $paddingDefaultValue;
+  &_wrapper {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  &__form-wrapper,
+  &_wrapper {
+    padding: $paddingDefaultValue;
+  }
+
+  &__copy-wrapper {
+    padding-left: 20px;
+  }
+}

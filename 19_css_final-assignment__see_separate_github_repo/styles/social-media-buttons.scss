@@ -1,0 +1,125 @@
+@import url("https://fonts.googleapis.com/css2?family=Work+Sans:wght@500&display=swap");
+
+@mixin social-media-row-defaults {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  width: 500px;
+  padding: 6px 40px 6px 20px;
+  transition: all 0.6s ease;
+  font-size: 24px;
+  border-width: 0px;
+}
+
+$body-background-color:  #c3cfe2;
+$move-focused-row: translateX(-60%);
+$blog-background-color: #e17b77; 
+$twitter-background-color: #00aced;
+$linkedin-background-color: #007bb6;
+$facebook-background-color: #3b5998;
+$github-background-color: #333;
+
+
+
+@mixin social-media-icon-defaults {
+  display: inline-block;
+  font-style: normal;
+  font-variant: normal;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  /* set distance between icon and the url */
+  margin-left: 10px;
+  margin-right: 45px;
+  padding: 10px;
+  font-weight: 900;
+  font-size: 30px;
+  color: white;
+  font-family: "Font Awesome 5 Brands";
+}
+
+html {
+  overflow-y: hidden;
+}
+
+body {
+  background-color: $body-background-color;
+  overflow-y: hidden;
+  margin: 0;
+  height: 2000px;
+}
+
+.social-media {
+  display: flex;
+  flex-direction: column;
+  top: 58%;
+  position: fixed;
+  right: 0;
+  transform: translateX(400px);
+  &__blog {
+    @include social-media-row-defaults();
+    background-color: $blog-background-color;
+    &:focus {
+      outline: none;
+      transform: $move-focused-row;
+    }
+    &::before {
+      @include social-media-icon-defaults();
+      // This icon is for free. The others are 'Font Awesome 5 Brands'.
+      font-family: "Font Awesome 5 Free";
+      content: "\f5fc";
+    }
+  }
+  &__twitter {
+    @include social-media-row-defaults();
+    background-color: $twitter-background-color;
+    &:focus {
+      outline: none;
+      transform: $move-focused-row;
+    }
+    &::before {
+      @include social-media-icon-defaults();
+      content: "\f099";
+    }
+  }
+  &__linkedin {
+    @include social-media-row-defaults();
+    background-color: $linkedin-background-color;
+    &:focus {
+      outline: none;
+      transform: $move-focused-row;
+    }
+    &::before {
+      @include social-media-icon-defaults();
+      content: "\f0e1";
+    }
+  }
+  &__facebook {
+    @include social-media-row-defaults();
+    background-color: $facebook-background-color;
+    &:focus {
+      outline: none;
+      transform: $move-focused-row;
+    }
+    &::before {
+      @include social-media-icon-defaults();
+      content: "\f39e";
+    }
+  }
+  &__github {
+    @include social-media-row-defaults();
+    background-color: $github-background-color;
+    &:focus {
+      outline: none;
+      transform: $move-focused-row;
+    }
+    &::before {
+      @include social-media-icon-defaults();
+      content: "\f09b";
+    }
+  }
+  &__url {
+    font-family: "Lato", sans-serif;
+    color: white;
+  }
+}
+

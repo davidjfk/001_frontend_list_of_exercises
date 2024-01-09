@@ -1,0 +1,37 @@
+/* */
+body { 
+    background-color: #FFFAFA;
+    color: greyblack;
+    /*note to self: following line is short-hand notation */
+    font: normal 14px Ubuntu, Merriweather, Nunito;
+}
+
+.black-border {
+    border: 5px solid black;
+}
+
+.post-stamp {
+    width: 150x;
+	height: px;
+	background: #fff url(george.jpg) no-repeat;
+	border: 12px dashed #1b1a19; 
+}
+
+
+/* */
+#green-background {
+    background-color: rgb(113, 185, 113);
+}
+
+.blue-background {
+    background-color: lightblue;
+}
+
+.brown-background {
+    background-color: burlywood;
+}
+
+img.photo {
+	border: 15px solid grey;
+	background-color: yellow;
+	padding: 10px;}

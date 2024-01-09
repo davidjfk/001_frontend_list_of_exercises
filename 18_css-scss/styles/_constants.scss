@@ -1,0 +1,10 @@
+/* background sections hero, about */
+$backgroundColor: #97d279;
+$featuredBackgroundColor: #000;
+$paddingDefaultValue: 20px;
+
+@mixin textDefault {
+  max-width: 700px;
+  text-align: center;
+  padding: $paddingDefaultValue;
+}

@@ -1,0 +1,57 @@
+/*author: David Sneek */
+a.inTheClouds:hover {
+  color: rgb(202, 228, 243);
+  font-weight: bold;
+}
+
+a.redColor:active {
+  color: red;
+  font-style: italic;
+}
+.yellowColor:visited {
+  color: yellow;
+}
+#roepnaamHuisdier:focus {
+  color: green;
+  font-size: 20px;
+}
+
+.flexContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  list-style-type: none;
+  padding-left: 0px;
+  background-color: rgb(36, 14, 238);
+  font-size: 22px;
+  border-style: solid;
+  height: 100%;
+  text-align: center;
+}
+nav ul li a {
+  color: white;
+  text-decoration: none;
+}
+/*search label field */
+[labelsearch] {
+  color: white;
+}
+/*remark: I have not used 'focus' here, because assignment only asks me to give one of the menu-items a grey-blue background*/
+.currentPage {
+  background-color: rgb(86, 150, 240);
+}
+
+/*search input field */
+#search {
+  margin-right: 5px;
+  margin-bottom: 4px;
+}
+
+ul.flexContainer li:hover {
+  background-color: rgb(165, 218, 231);
+}
+
+ul.flexContainer li > input:focus {
+  border-color: aqua;
+  border-width: 4px;
+}
